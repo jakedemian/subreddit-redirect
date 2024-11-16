@@ -1,9 +1,20 @@
 {
   "manifest_version": 2,
-  "name": "URL Logger",
+  "name": "Reddit Redirect",
   "version": "1.0",
-  "description": "Logs URLs entered in the address bar before navigation.",
-  "permissions": ["webNavigation"],
+  "description": "Redirects Reddit URLs according to specified rules.",
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "*://*.reddit.com/*",
+    "*://*.reddit.co.uk/*",
+    "*://*.reddit.fr/*",
+    "*://*.reddit.de/*",
+    "*://*.reddit.jp/*",
+    "*://*.reddit.in/*",
+    "*://*.reddit.ca/*",
+    "*://*.reddit.ru/*"
+  ],
   "background": {
     "scripts": ["background.js"]
   }

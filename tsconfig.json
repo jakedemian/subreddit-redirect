@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "types": ["chrome"],
-    "lib": ["ES6", "DOM"]
+    "lib": ["ES6", "DOM", "es2016"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
