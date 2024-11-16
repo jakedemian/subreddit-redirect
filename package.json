@@ -1,0 +1,20 @@
+{
+  "name": "reddit-redirect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:chrome": "tsc && mkdir -p builds/chrome && cp src/manifest.chrome.json builds/chrome/manifest.json && cp builds/temp/background.js builds/chrome/",
+    "build:firefox": "tsc && mkdir -p builds/firefox && cp src/manifest.firefox.json builds/firefox/manifest.json && cp builds/temp/background.js builds/firefox/",
+    "build": "npm run clean && npm run build:chrome && npm run build:firefox",
+    "clean": "rm -rf builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.0.283",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "URL Logger",
+  "version": "1.0",
+  "description": "Logs URLs entered in the address bar before navigation.",
+  "permissions": ["webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
