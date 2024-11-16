@@ -1,8 +1,7 @@
 {
-  "name": "reddit-redirect",
+  "name": "subreddit-redirect",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A browser extension that redirects Reddit URLs according to specified rules.",
   "scripts": {
     "build:chrome": "webpack --mode=production && mkdir -p builds/chrome && cp src/manifest.chrome.json builds/chrome/manifest.json && cp builds/temp/background.js builds/chrome/",
     "build:firefox": "webpack --mode=production && mkdir -p builds/firefox && cp src/manifest.firefox.json builds/firefox/manifest.json && cp builds/temp/background.js builds/firefox/",
@@ -10,9 +9,25 @@
     "clean": "rm -rf builds",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "reddit",
+    "redirect",
+    "subreddit",
+    "browser-extension",
+    "chrome-extension",
+    "firefox-addon",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakedemian/subreddit-redirect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakedemian/subreddit-redirect/issues"
+  },
+  "homepage": "https://github.com/jakedemian/subreddit-redirect#readme",
   "devDependencies": {
     "@types/chrome": "^0.0.283",
     "@types/jest": "^29.5.14",
