@@ -1,5 +1,7 @@
 # Subreddit Redirect
 
+![Subreddit Redirect](./subreddit-redirect.png)
+
 A browser extension that redirects Reddit URLs according to specified rules. This extension modifies Reddit URLs to ensure you're always directed to the correct subreddit, even if the URL contains unexpected subdomains.
 
 ## Features

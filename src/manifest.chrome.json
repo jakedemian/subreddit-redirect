@@ -17,5 +17,11 @@
   "background": {
     "service_worker": "background.js",
     "type": "module"
+  },
+  "icons": {
+    "16": "subreddit-redirect.png",
+    "32": "subreddit-redirect.png",
+    "48": "subreddit-redirect.png",
+    "128": "subreddit-redirect.png"
   }
 }
