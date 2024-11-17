@@ -65,4 +65,12 @@ describe("transformRedditUrl", () => {
 
     expect(result).toBe(transformedUrl);
   });
+  it("https://www.reddit.com/message/unread/ -> NOOP", () => {
+    const originalUrl = "https://www.reddit.com/message/unread/";
+    const transformedUrl = null; // url is unchanged
+
+    const result = transformRedditUrl(originalUrl);
+
+    expect(result).toBe(transformedUrl);
+  });
 });

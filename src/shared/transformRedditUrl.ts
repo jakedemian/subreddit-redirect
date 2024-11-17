@@ -34,6 +34,10 @@ export function transformRedditUrl(originalUrl: string): string | null {
     return null;
   }
 
+  if (url.pathname.length > 1) {
+    return null; // skip pathed urls like https://www.reddit.com/message/unread/
+  }
+
   const hostnameParts = url.hostname.split(".");
   const tld = createTldFromParts(hostnameParts);
 
