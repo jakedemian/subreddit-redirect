@@ -73,4 +73,20 @@ describe("transformRedditUrl", () => {
 
     expect(result).toBe(transformedUrl);
   });
+  it("https://www.reddit.com/svc/shreddit/events -> NOOP", () => {
+    const originalUrl = "https://www.reddit.com/svc/shreddit/events";
+    const transformedUrl = null; // url is unchanged
+
+    const result = transformRedditUrl(originalUrl);
+
+    expect(result).toBe(transformedUrl);
+  });
+  it("https://www.reddit.com/ -> NOOP", () => {
+    const originalUrl = "https://www.reddit.com/";
+    const transformedUrl = null; // url is unchanged
+
+    const result = transformRedditUrl(originalUrl);
+
+    expect(result).toBe(transformedUrl);
+  });
 });
