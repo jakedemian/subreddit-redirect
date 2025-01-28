@@ -89,4 +89,12 @@ describe("transformRedditUrl", () => {
 
     expect(result).toBe(transformedUrl);
   });
+  it("http://nba.reddit.com/   -> https://reddit.com/r/nba", () => {
+    const originalUrl = "http://nba.reddit.com/";
+    const transformedUrl = "https://reddit.com/r/nba";
+
+    const result = transformRedditUrl(originalUrl);
+
+    expect(result).toBe(transformedUrl);
+  });
 });

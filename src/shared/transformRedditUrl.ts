@@ -38,10 +38,6 @@ export function transformRedditUrl(originalUrl: string): string | null {
     return null; // skip pathed urls like https://www.reddit.com/message/unread/
   }
 
-  if (url.pathname === "/" && originalUrl.endsWith("/")) {
-    return null;
-  }
-
   const hostnameParts = url.hostname.split(".");
   const tld = createTldFromParts(hostnameParts);
 
@@ -50,6 +46,10 @@ export function transformRedditUrl(originalUrl: string): string | null {
   }
 
   if (hostnameParts[0] === "www") {
+    // handle trailing slash for www specifically
+    if (url.pathname === "/" && originalUrl.endsWith("/")) {
+      return null;
+    }
     if (hostnameParts[1] === "reddit") {
       return createUrl(tld);
     }
